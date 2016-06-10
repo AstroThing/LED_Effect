@@ -18,7 +18,6 @@ module counter(
 		counting <= enable && !limit_reached;
 		if(reset)
 		begin
-			count_limit <= 32'b0;
 			count <= 32'b0;
 			counting <= 0;
 			limit_reached <= 0;

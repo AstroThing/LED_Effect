@@ -2,27 +2,27 @@ Command line:
    gppm_top_test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49667
+     -socket  49882
 
-Thu Jun 09 23:09:46 2016
+Fri Jun 10 00:29:22 2016
 
 
- Elaboration Time: 0.218402 sec
+ Elaboration Time: 0.109201 sec
 
- Current Memory Usage: 694.493 Meg
+ Current Memory Usage: 695.214 Meg
 
  Total Signals          : 58
  Total Nets             : 326
  Total Signal Drivers   : 39
  Total Blocks           : 7
  Total Primitive Blocks : 5
- Total Processes        : 56
+ Total Processes        : 57
  Total Traceable Variables  : 74
  Total Scalar Nets and Variables : 1304
 
- Total Simulation Time: 0.280802 sec
+ Total Simulation Time: 0.171601 sec
 
- Current Memory Usage: 695.542 Meg
+ Current Memory Usage: 695.214 Meg
 
-Thu Jun 09 23:09:55 2016
+Fri Jun 10 00:29:36 2016
 

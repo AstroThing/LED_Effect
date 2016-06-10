@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="27" />
    <wvobject fp_name="/gppm_top_test/leds" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">leds[7:0]</obj_property>
       <obj_property name="ObjectShortName">leds[7:0]</obj_property>
@@ -31,6 +31,33 @@
       <obj_property name="ElementShortName">statename[135:0]</obj_property>
       <obj_property name="ObjectShortName">statename[135:0]</obj_property>
       <obj_property name="Radix">ASCIIRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gppm_top_test/uut/c_limit" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_limit[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c_limit[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gppm_top_test/uut/counter/count_limit" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count_limit[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count_limit[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gppm_top_test/uut/c_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c_reset</obj_property>
+      <obj_property name="ObjectShortName">c_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gppm_top_test/uut/c_limit_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c_limit_we</obj_property>
+      <obj_property name="ObjectShortName">c_limit_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gppm_top_test/uut/c_limit_we_wire" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c_limit_we_wire</obj_property>
+      <obj_property name="ObjectShortName">c_limit_we_wire</obj_property>
+   </wvobject>
+   <wvobject fp_name="/gppm_top_test/uut/counter/count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/gppm_top_test/uut/rf_we" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rf_we</obj_property>
@@ -59,7 +86,7 @@
    <wvobject fp_name="/gppm_top_test/uut/alu_result" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">alu_result[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_result[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/gppm_top_test/uut/fsm/ra1" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ra1[2:0]</obj_property>
@@ -72,7 +99,7 @@
    <wvobject fp_name="/gppm_top_test/uut/rd1" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">rd1[31:0]</obj_property>
       <obj_property name="ObjectShortName">rd1[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/gppm_top_test/uut/rd2" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">rd2[31:0]</obj_property>

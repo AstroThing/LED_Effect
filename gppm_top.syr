@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: gppm_top.prj
 
@@ -154,7 +154,7 @@ Analyzing hierarchy for module <FSM> in library <work> with parameters.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <gppm_top>.
-WARNING:Xst:905 - "gppm_top.v" line 104: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:905 - "gppm_top.v" line 109: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <rd1>
 Module <gppm_top> is correct for synthesis.
  
@@ -224,9 +224,9 @@ Synthesizing Unit <counter>.
     Related source file is "counter.v".
     Found 1-bit register for signal <limit_reached>.
     Found 32-bit register for signal <count>.
-    Found 32-bit adder for signal <count$addsub0000> created at line 36.
-    Found 32-bit comparator greatequal for signal <count$cmp_ge0000> created at line 34.
-    Found 32-bit comparator less for signal <count$cmp_lt0000> created at line 34.
+    Found 32-bit adder for signal <count$addsub0000> created at line 35.
+    Found 32-bit comparator greatequal for signal <count$cmp_ge0000> created at line 33.
+    Found 32-bit comparator less for signal <count$cmp_lt0000> created at line 33.
     Found 32-bit 4-to-1 multiplexer for signal <count$mux0000>.
     Found 32-bit register for signal <count_limit>.
     Found 1-bit register for signal <counting>.
@@ -246,7 +246,7 @@ WARNING:Xst:646 - Signal <statename> is assigned but never used. This unconnecte
     | States             | 12                                             |
     | Transitions        | 14                                             |
     | Inputs             | 2                                              |
-    | Outputs            | 49                                             |
+    | Outputs            | 38                                             |
     | Clock              | clk                       (rising_edge)        |
     | Reset              | reset                     (positive)           |
     | Reset type         | asynchronous                                   |
@@ -270,7 +270,6 @@ Synthesizing Unit <gppm_top>.
     Related source file is "gppm_top.v".
 WARNING:Xst:646 - Signal <wd_sel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <imm> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <c_limit> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
 WARNING:Xst:737 - Found 8-bit latch for signal <leds>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 32-bit 4-to-1 multiplexer for signal <wd>.
     Summary:
@@ -330,7 +329,6 @@ Optimizing FSM <fsm/state/FSM> on signal <state[1:12]> with one-hot encoding.
  00000110 | 010000000000
  10110000 | 100000000000
 --------------------------
-INFO:Xst:2261 - The FF/Latch <count_limit_0> in Unit <counter> is equivalent to the following 31 FFs/Latches, which will be removed : <count_limit_1> <count_limit_2> <count_limit_3> <count_limit_4> <count_limit_5> <count_limit_6> <count_limit_7> <count_limit_8> <count_limit_9> <count_limit_10> <count_limit_11> <count_limit_12> <count_limit_13> <count_limit_14> <count_limit_15> <count_limit_16> <count_limit_17> <count_limit_18> <count_limit_19> <count_limit_20> <count_limit_21> <count_limit_22> <count_limit_23> <count_limit_24> <count_limit_25> <count_limit_26> <count_limit_27> <count_limit_28> <count_limit_29> <count_limit_30> <count_limit_31> 
 INFO:Xst:2261 - The FF/Latch <ra2_2> in Unit <fsm> is equivalent to the following FF/Latch, which will be removed : <ra1_0> 
 INFO:Xst:2261 - The FF/Latch <alu_op_0> in Unit <fsm> is equivalent to the following FF/Latch, which will be removed : <alu_op_1> 
 INFO:Xst:2261 - The FF/Latch <ra2_1> in Unit <fsm> is equivalent to the following 2 FFs/Latches, which will be removed : <alu_op_2> <wa_2> 
@@ -343,29 +341,17 @@ WARNING:Xst:1710 - FF/Latch <28> (without init value) has a constant value of 0 
 WARNING:Xst:1710 - FF/Latch <27> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <26> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <25> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <24> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <23> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <22> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <21> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <20> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <19> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <18> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <17> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <16> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <15> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <14> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <13> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <12> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <11> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <10> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <9> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <8> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <6> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <5> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <4> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <3> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <2> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <count_limit_0> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <1> (without init value) has a constant value of 0 in block <imm>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <reg_file>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_registers> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -436,62 +422,18 @@ INFO:Xst:2261 - The FF/Latch <ra1_0> in Unit <FSM> is equivalent to the followin
 INFO:Xst:2261 - The FF/Latch <alu_op_0> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <alu_op_1> 
 INFO:Xst:2261 - The FF/Latch <alu_op_2> in Unit <FSM> is equivalent to the following 2 FFs/Latches, which will be removed : <ra2_1> <wa_2> 
 INFO:Xst:2261 - The FF/Latch <ra1_2> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <wd_sel_0> 
-INFO:Xst:2261 - The FF/Latch <count_limit_0> in Unit <counter> is equivalent to the following 31 FFs/Latches, which will be removed : <count_limit_1> <count_limit_2> <count_limit_3> <count_limit_4> <count_limit_5> <count_limit_6> <count_limit_7> <count_limit_8> <count_limit_9> <count_limit_10> <count_limit_11> <count_limit_12> <count_limit_13> <count_limit_14> <count_limit_15> <count_limit_16> <count_limit_17> <count_limit_18> <count_limit_19> <count_limit_20> <count_limit_21> <count_limit_22> <count_limit_23> <count_limit_24> <count_limit_25> <count_limit_26> <count_limit_27> <count_limit_28> <count_limit_29> <count_limit_30> <count_limit_31> 
-WARNING:Xst:1710 - FF/Latch <count_limit_0> (without init value) has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <count_0> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_1> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_2> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_3> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_4> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_5> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_6> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_7> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_8> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_9> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_10> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_11> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_12> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_13> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_14> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_15> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_16> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_17> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_18> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_19> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_20> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_21> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_22> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_23> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_24> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_25> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_26> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_27> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_28> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_29> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_30> of sequential type is unconnected in block <counter>.
-WARNING:Xst:2677 - Node <count_31> of sequential type is unconnected in block <counter>.
-WARNING:Xst:1710 - FF/Latch <imm_2> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <6> in Unit <LPM_DFF_5> is equivalent to the following 11 FFs/Latches, which will be removed : <11> <12> <13> <14> <16> <18> <19> <20> <21> <22> <24> 
+WARNING:Xst:1710 - FF/Latch <imm_1> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_2> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_3> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_4> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_5> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_6> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_8> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_9> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_10> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_11> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_12> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_13> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_14> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_15> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_16> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_17> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_18> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_19> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_20> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_21> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_22> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_23> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_24> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_25> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_26> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <imm_27> (without init value) has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
@@ -503,7 +445,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ra1_0> (without ini
 INFO:Xst:2261 - The FF/Latch <ra1_1> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <state_FSM_FFd2> 
 INFO:Xst:2261 - The FF/Latch <alu_op_0> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <state_FSM_FFd8> 
 INFO:Xst:2261 - The FF/Latch <alu_op_2> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <state_FSM_FFd10> 
-INFO:Xst:2261 - The FF/Latch <state_FSM_FFd4> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <imm_1> 
+INFO:Xst:2261 - The FF/Latch <state_FSM_FFd4> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <imm_6> 
 INFO:Xst:2261 - The FF/Latch <state_FSM_FFd11> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <imm_7> 
 INFO:Xst:2261 - The FF/Latch <ra1_2> in Unit <FSM> is equivalent to the following FF/Latch, which will be removed : <state_FSM_FFd1> 
 
@@ -511,13 +453,15 @@ Optimizing unit <gppm_top> ...
 
 Optimizing unit <ALU> ...
 
+Optimizing unit <counter> ...
+
 Optimizing unit <FSM> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block gppm_top, actual ratio is 7.
+Found area constraint ratio of 100 (+ 5) on block gppm_top, actual ratio is 9.
 FlipFlop fsm/alu_op_2 has been replicated 1 time(s)
-FlipFlop fsm/ra1_1 has been replicated 3 time(s)
+FlipFlop fsm/ra1_1 has been replicated 5 time(s)
 
 Final Macro Processing ...
 
@@ -525,8 +469,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 22
- Flip-Flops                                            : 22
+# Registers                                            : 88
+ Flip-Flops                                            : 88
 
 =========================================================================
 
@@ -555,24 +499,26 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 798
+# BELS                             : 1011
 #      GND                         : 1
-#      LUT2                        : 60
+#      INV                         : 1
+#      LUT1                        : 31
+#      LUT2                        : 92
 #      LUT2_D                      : 2
 #      LUT2_L                      : 3
-#      LUT3                        : 225
+#      LUT3                        : 258
 #      LUT3_D                      : 15
 #      LUT3_L                      : 3
-#      LUT4                        : 225
-#      LUT4_D                      : 11
+#      LUT4                        : 234
+#      LUT4_D                      : 12
 #      LUT4_L                      : 19
-#      MUXCY                       : 68
-#      MUXF5                       : 133
+#      MUXCY                       : 131
+#      MUXF5                       : 144
 #      VCC                         : 1
-#      XORCY                       : 32
-# FlipFlops/Latches                : 30
-#      FDC                         : 18
-#      FDE                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 96
+#      FDC                         : 20
+#      FDE                         : 65
 #      FDP                         : 2
 #      FDR                         : 1
 #      LD                          : 8
@@ -590,10 +536,10 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      355  out of   4656     7%  
- Number of Slice Flip Flops:             22  out of   9312     0%  
- Number of 4 input LUTs:                691  out of   9312     7%  
-    Number used as logic:               563
+ Number of Slices:                      410  out of   4656     8%  
+ Number of Slice Flip Flops:             88  out of   9312     0%  
+ Number of 4 input LUTs:                798  out of   9312     8%  
+    Number used as logic:               670
     Number used as RAMs:                128
  Number of IOs:                          18
  Number of bonded IOBs:                  18  out of    190     9%  
@@ -621,7 +567,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 86    |
+clk                                | BUFGP                  | 152   |
 fsm/state_FSM_FFd3                 | NONE(leds_0)           | 8     |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -631,14 +577,14 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-reset                              | IBUF                   | 20    |
+reset                              | IBUF                   | 22    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 12.048ns (Maximum Frequency: 83.000MHz)
+   Minimum period: 12.147ns (Maximum Frequency: 82.324MHz)
    Minimum input arrival time before clock: 2.715ns
    Maximum output required time after clock: 4.114ns
    Maximum combinational path delay: No path found
@@ -649,10 +595,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 12.048ns (frequency: 83.000MHz)
-  Total number of paths / destination ports: 118886 / 471
+  Clock period: 12.147ns (frequency: 82.324MHz)
+  Total number of paths / destination ports: 137872 / 601
 -------------------------------------------------------------------------
-Delay:               12.048ns (Levels of Logic = 15)
+Delay:               12.147ns (Levels of Logic = 15)
   Source:            fsm/ra2_0 (FF)
   Destination:       fsm/wd_sel_1 (FF)
   Source Clock:      clk rising
@@ -669,19 +615,19 @@ Delay:               12.048ns (Levels of Logic = 15)
      MUXCY:CI->O           1   0.052   0.000  alu/result_or0000_wg_cy<1> (alu/result_or0000_wg_cy<1>)
      MUXCY:CI->O           1   0.052   0.000  alu/result_or0000_wg_cy<2> (alu/result_or0000_wg_cy<2>)
      MUXCY:CI->O           1   0.052   0.000  alu/result_or0000_wg_cy<3> (alu/result_or0000_wg_cy<3>)
-     MUXCY:CI->O           3   0.400   0.481  alu/result_or0000_wg_cy<4> (alu/result_or0000_wg_cy<4>)
-     LUT3_D:I2->O         30   0.612   1.075  alu/result_or0000_wg_cy<6>1_1 (alu/result_or0000_wg_cy<6>1)
-     LUT4:I3->O            1   0.612   0.360  alu/result_shift0000<17>87 (alu/result_shift0000<17>)
-     LUT4:I3->O            1   0.612   0.000  alu/Mmux_result_2_f5_6_G (N566)
-     MUXF5:I1->O           2   0.278   0.449  alu/Mmux_result_2_f5_6 (alu_result_wire<17>)
-     LUT4:I1->O            3   0.612   0.454  fsm/state_FSM_FFd10-In10 (fsm/state_FSM_FFd10-In10)
-     LUT4:I3->O            1   0.612   0.000  fsm/state_FSM_FFd10-In104_SW0_SW1_F (N557)
-     MUXF5:I0->O           1   0.278   0.360  fsm/state_FSM_FFd10-In104_SW0_SW1 (N336)
-     LUT4:I3->O            1   0.612   0.000  fsm/state_FSM_Out481 (fsm/state_index0033)
+     MUXCY:CI->O           3   0.399   0.481  alu/result_or0000_wg_cy<4> (alu/result_or0000_wg_cy<4>)
+     LUT3_D:I2->O         32   0.612   1.142  alu/result_or0000_wg_cy<6>1_1 (alu/result_or0000_wg_cy<6>1)
+     LUT4:I1->O            1   0.612   0.360  alu/Mmux_result_38_SW0 (N348)
+     LUT4:I3->O            1   0.612   0.000  alu/Mmux_result_2_f5_7_G (N601)
+     MUXF5:I1->O           3   0.278   0.454  alu/Mmux_result_2_f5_7 (alu_result_wire<18>)
+     LUT4:I3->O            3   0.612   0.454  fsm/state_FSM_FFd10-In10 (fsm/state_FSM_FFd10-In10)
+     LUT4:I3->O            1   0.612   0.000  fsm/state_FSM_FFd10-In104_SW0_SW1_F (N594)
+     MUXF5:I0->O           1   0.278   0.387  fsm/state_FSM_FFd10-In104_SW0_SW1 (N371)
+     LUT4:I2->O            1   0.612   0.000  fsm/state_FSM_Out371 (fsm/state_index0022)
      FDC:D                     0.268          fsm/wd_sel_1
     ----------------------------------------
-    Total                     12.048ns (7.192ns logic, 4.856ns route)
-                                       (59.7% logic, 40.3% route)
+    Total                     12.147ns (7.192ns logic, 4.955ns route)
+                                       (59.2% logic, 40.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -726,14 +672,14 @@ Offset:              4.114ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.02 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.25 secs
  
 --> 
 
-Total memory usage is 212032 kilobytes
+Total memory usage is 214208 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  100 (   0 filtered)
-Number of infos    :   20 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
 

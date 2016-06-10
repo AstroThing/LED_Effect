@@ -160,7 +160,7 @@ module FSM (
           ra2[2:0] <= 3'b001;
         end
         init_counter     : begin
-          imm[31:0] <= 32'h2;
+          imm[31:0] <= 32'h17D7840;
           wa[2:0] <= 3'b010;
         end
         init_led_limit   : begin

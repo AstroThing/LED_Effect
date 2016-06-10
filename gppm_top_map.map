@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : ft256
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Jun 09 23:10:27 2016
+Mapped Date    : Fri Jun 10 00:30:42 2016
 
 Mapping design into LUTs...
 Running directed packing...
@@ -27,16 +27,16 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:            22 out of   9,312    1%
-  Number of 4 input LUTs:               691 out of   9,312    7%
+  Number of Slice Flip Flops:            88 out of   9,312    1%
+  Number of 4 input LUTs:               767 out of   9,312    8%
 Logic Distribution:
-  Number of occupied Slices:            365 out of   4,656    7%
-    Number of Slices containing only related logic:     365 out of     365 100%
-    Number of Slices containing unrelated logic:          0 out of     365   0%
+  Number of occupied Slices:            419 out of   4,656    8%
+    Number of Slices containing only related logic:     419 out of     419 100%
+    Number of Slices containing unrelated logic:          0 out of     419   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         692 out of   9,312    7%
-    Number used as logic:               563
-    Number used as a route-thru:          1
+  Total Number of 4 input LUTs:         799 out of   9,312    8%
+    Number used as logic:               639
+    Number used as a route-thru:         32
     Number used for Dual Port RAMs:     128
       (Two LUTs used per Dual Port RAM)
 
@@ -47,10 +47,10 @@ Logic Distribution:
     IOB Latches:                          8
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                4.79
+Average Fanout of Non-Clock Nets:                4.42
 
-Peak Memory Usage:  210 MB
-Total REAL time to MAP completion:  2 secs 
+Peak Memory Usage:  211 MB
+Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:

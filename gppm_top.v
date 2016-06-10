@@ -70,6 +70,11 @@ wire ld_we_wire;
 
 FSM fsm(clk, reset, ra1_wire, ra2_wire, rf_we_wire, wa_wire, imm_wire, wd_sel_wire, alu_operator_wire, ld_we_wire, c_enable_wire, c_limit_we_wire, c_reset_wire, alu_isZero, c_limit_reached);
 
+always @ (rd1)
+begin
+	c_limit = rd1;
+end
+
 always @ (alu_isZero_wire)
 begin
 	alu_isZero = alu_isZero_wire;
