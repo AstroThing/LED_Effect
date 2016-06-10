@@ -23,15 +23,13 @@ module FSM (
   parameter 
   init_leds         = 8'b00010000, // extra=000 rf_we=1 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
   check_leds        = 8'b00000000, // extra=000 rf_we=0 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
-  close_counter     = 8'b00100000, // extra=001 rf_we=0 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
   init_counter      = 8'b00110000, // extra=001 rf_we=1 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
   init_led_limit    = 8'b01010000, // extra=010 rf_we=1 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
   init_shift_offset = 8'b01110000, // extra=011 rf_we=1 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
   set_counter       = 8'b00000110, // extra=000 rf_we=0 ld_we=0 c_reset=1 c_limit_we=1 c_enable=0 
   set_leds          = 8'b00001000, // extra=000 rf_we=0 ld_we=1 c_reset=0 c_limit_we=0 c_enable=0 
   shift_led         = 8'b10010000, // extra=100 rf_we=1 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
-  stop              = 8'b01000000, // extra=010 rf_we=0 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
-  update_leds       = 8'b10110000, // extra=101 rf_we=1 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
+  stop              = 8'b00100000, // extra=001 rf_we=0 ld_we=0 c_reset=0 c_limit_we=0 c_enable=0 
   waitCounter       = 8'b00000001; // extra=000 rf_we=0 ld_we=0 c_reset=0 c_limit_we=0 c_enable=1 
 
   reg [7:0] state;
@@ -56,11 +54,6 @@ module FSM (
           nextstate = stop;
         end
       end
-      close_counter    : begin
-        begin
-          nextstate = waitCounter;
-        end
-      end
       init_counter     : begin
         begin
           nextstate = init_shift_offset;
@@ -78,7 +71,7 @@ module FSM (
       end
       set_counter      : begin
         begin
-          nextstate = close_counter;
+          nextstate = waitCounter;
         end
       end
       set_leds         : begin
@@ -88,17 +81,12 @@ module FSM (
       end
       shift_led        : begin
         begin
-          nextstate = update_leds;
+          nextstate = set_leds;
         end
       end
       stop             : begin
         begin
           nextstate = stop;
-        end
-      end
-      update_leds      : begin
-        begin
-          nextstate = set_leds;
         end
       end
       waitCounter      : begin
@@ -177,12 +165,7 @@ module FSM (
         shift_led        : begin
           alu_op[2:0] <= 3'b100;
           ra2[2:0] <= 3'b011;
-          wa[2:0] <= 3'b100;
           wd_sel[1:0] <= 2'b10;
-        end
-        update_leds      : begin
-          ra1[2:0] <= 3'b100;
-          wd_sel[1:0] <= 2'b11;
         end
       endcase
     end
@@ -197,8 +180,6 @@ module FSM (
         statename = "init_leds";
       check_leds       :
         statename = "check_leds";
-      close_counter    :
-        statename = "close_counter";
       init_counter     :
         statename = "init_counter";
       init_led_limit   :
@@ -213,8 +194,6 @@ module FSM (
         statename = "shift_led";
       stop             :
         statename = "stop";
-      update_leds      :
-        statename = "update_leds";
       waitCounter      :
         statename = "waitCounter";
       default          :
