@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/nimer/Documents/Verilog Projects/LED_Effect/alu_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="alu_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="/alu_test/result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/isZero" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isZero</obj_property>
+      <obj_property name="ObjectShortName">isZero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/op1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op1[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/op2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op2[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_test/operator" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">operator[1:0]</obj_property>
+      <obj_property name="ObjectShortName">operator[1:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

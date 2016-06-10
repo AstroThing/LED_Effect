@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/nimer/Documents/Verilog Projects/LED_Effect/gppm_top_test_isim_beh.exe" -prj "C:/Users/nimer/Documents/Verilog Projects/LED_Effect/gppm_top_test_beh.prj" "work.gppm_top_test" "work.glbl" 

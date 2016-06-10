@@ -1,0 +1,28 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/nimer/Documents/Verilog Projects/LED_Effect/gppm_top_test_isim_beh.exe -prj C:/Users/nimer/Documents/Verilog Projects/LED_Effect/gppm_top_test_beh.prj work.gppm_top_test work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/nimer/Documents/Verilog Projects/LED_Effect/reg_file.v" into library work
+Analyzing Verilog file "C:/Users/nimer/Documents/Verilog Projects/LED_Effect/FSM.v" into library work
+Analyzing Verilog file "C:/Users/nimer/Documents/Verilog Projects/LED_Effect/counter.v" into library work
+Analyzing Verilog file "C:/Users/nimer/Documents/Verilog Projects/LED_Effect/ALU.v" into library work
+Analyzing Verilog file "C:/Users/nimer/Documents/Verilog Projects/LED_Effect/gppm_top.v" into library work
+Analyzing Verilog file "C:/Users/nimer/Documents/Verilog Projects/LED_Effect/gppm_top_test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 102636 KB
+Fuse CPU Usage: 233 ms
+Compiling module reg_file
+Compiling module ALU
+Compiling module counter
+Compiling module FSM
+Compiling module gppm_top
+Compiling module gppm_top_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 7 Verilog Units
+Built simulation executable C:/Users/nimer/Documents/Verilog Projects/LED_Effect/gppm_top_test_isim_beh.exe
+Fuse Memory Usage: 106200 KB
+Fuse CPU Usage: 280 ms
